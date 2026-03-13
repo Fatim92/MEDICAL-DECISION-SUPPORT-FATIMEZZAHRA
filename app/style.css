@@ -1,101 +1,95 @@
-body {
-    font-family: 'Arial', sans-serif;
+/* Reset */
+* {
     margin: 0;
     padding: 0;
-    line-height: 1.6;
-    color: #333;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
 }
 
-header {
-    background-color: #4CAF50;
-    padding: 15px 0;
+body {
+    background-color: #e6f2ff;
+}
+
+/* Navbar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background-color: #023e8a;
+}
+
+nav .logo {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
 }
 
 nav ul {
-    display: flex;
-    justify-content: center;
     list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-nav ul li {
-    margin: 0 15px;
+    display: flex;
+    gap: 30px;
 }
 
 nav ul li a {
     color: white;
     text-decoration: none;
+    font-weight: 500;
+}
+
+nav .btn-nav {
+    background-color: #d90429;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-decoration: none;
     font-weight: bold;
 }
 
-nav ul li a.active {
-    text-decoration: underline;
+nav .btn-nav:hover {
+    background-color: #9b0218;
 }
 
+/* Hero Section */
 .hero {
-    position: relative;
-    text-align: center;
-    color: white;
-}
-
-.hero-img {
-    width: 100%;
-    max-height: 400px;
-    object-fit: cover;
-    opacity: 0.8;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 60px 50px;
+    gap: 20px;
 }
 
 .hero-text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    max-width: 50%;
 }
 
-.btn {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #FF5722;
+.hero-text h1 {
+    font-size: 3rem;
+    color: #03045e;
+    margin-bottom: 20px;
+}
+
+.hero-text p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    color: #023e8a;
+}
+
+.btn-hero {
+    background-color: #0077b6;
     color: white;
+    padding: 15px 30px;
+    border-radius: 10px;
     text-decoration: none;
-    border-radius: 5px;
-    margin-top: 15px;
+    font-weight: bold;
 }
 
-.form-section {
-    padding: 40px;
-    max-width: 600px;
-    margin: auto;
+.btn-hero:hover {
+    background-color: #023e8a;
 }
 
-.form-section form label {
-    display: block;
-    margin: 10px 0 5px;
-}
-
-.form-section form input, 
-.form-section form select {
-    width: 100%;
-    padding: 8px;
-    margin-bottom: 15px;
-}
-
-.about-section {
-    padding: 40px;
-    text-align: center;
-}
-
-.about-section img {
-    width: 80%;
-    max-width: 600px;
-    margin-top: 20px;
-}
-
-footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 15px 0;
-    margin-top: 20px;
+.hero-image img {
+    max-width: 100%;
+    border-radius: 15px;
+    box-shadow: 0px 5px 20px rgba(0,0,0,0.2);
 }

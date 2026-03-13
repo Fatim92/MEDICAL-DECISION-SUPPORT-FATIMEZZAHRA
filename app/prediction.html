@@ -2,51 +2,56 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Prediction - Medical Decision Support</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction - Obesity Risk</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="prediction.html" class="active">Prediction</a></li>
-                <li><a href="about.html">About</a></li>
-            </ul>
-        </nav>
-    </header>
+    <!-- Navbar -->
+    <nav>
+        <div class="logo">ObesityCare</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="prediction.html" class="active">Prediction</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <a href="contact.html" class="btn-nav">Get in Touch</a>
+    </nav>
 
-    <section class="form-section">
-        <h1>Patient Information</h1>
-        <form>
+    <!-- Prediction Form -->
+    <section class="prediction-form">
+        <h2>Patient Information</h2>
+        <form id="predictionForm">
             <label for="age">Age</label>
-            <input type="number" id="age" name="age">
+            <input type="number" id="age" name="age" required>
 
             <label for="height">Height (cm)</label>
-            <input type="number" id="height" name="height">
+            <input type="number" id="height" name="height" required>
 
             <label for="weight">Weight (kg)</label>
-            <input type="number" id="weight" name="weight">
+            <input type="number" id="weight" name="weight" required>
 
             <label for="family_history">Family History of Obesity?</label>
             <select id="family_history" name="family_history">
-                <option>No</option>
-                <option>Yes</option>
+                <option value="Yes">Yes</option>
+                <option value="No" selected>No</option>
             </select>
 
             <label for="activity">Physical Activity Level</label>
             <select id="activity" name="activity">
-                <option>Low</option>
-                <option>Moderate</option>
-                <option>High</option>
+                <option value="Low">Low</option>
+                <option value="Moderate">Moderate</option>
+                <option value="High" selected>High</option>
             </select>
 
-            <button type="submit" class="btn">Predict</button>
+            <button type="submit" class="btn-hero">Predict Risk</button>
         </form>
+
+        <div id="result">
+            <p>Prediction will appear here...</p>
+        </div>
     </section>
 
-    <footer>
-        <p>&copy; 2026 Medical Decision Support</p>
-    </footer>
 </body>
 </html>
